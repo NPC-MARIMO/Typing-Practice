@@ -1,94 +1,129 @@
-body{
-    background-color: rgb(22, 32, 51);
+body {
+    background-color: #0d1117;
     text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
 }
 
-*{
-    margin: 0px;
-        padding: 0px ;
-        color: white;
-}
-ul{
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    font-size: 2rem;
-    
-}
-a{
-    text-decoration: none;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-h1{
+h1 {
     margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     height: 6rem;
-    color:  #fff;
-    background-color: rgb(83, 88, 102);
+    background: linear-gradient(135deg, #4a90e2, #1e3a8a);
+    color: white;
     line-height: 6rem;
-    font-size: 5rem;
-
+    font-size: 4rem;
+    box-shadow: 0px 6px 15px rgba(74, 144, 226, 0.3);
+    padding: 1rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
 }
-.char{
-    background-color: rgb(83, 88, 102);
-    height: 20rem;
-    width: 20rem;
+
+h3 {
+    margin: 2rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.charAndScore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.char {
+    background: radial-gradient(circle, #4a90e2 10%, #1e3a8a 80%);
+    height: 18rem;
+    width: 18rem;
     border-radius: 50%;
     text-align: center;
-    line-height: 20rem;
-    font-size: 15rem;
-    margin-left: 5rem;
+    line-height: 18rem;
+    font-size: 10rem;
+    font-weight: bold;
+    color: #0d1117;
+    box-shadow: 0px 8px 20px rgba(74, 144, 226, 0.4);
+    animation: pop 0.3s ease-in-out;
 }
 
-h3{
+@keyframes pop {
+    0% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+}
+
+#inputDiv {
     text-align: center;
-    margin:5rem ;
-    font-size: 2rem;
-}
-.charAndScore{
-    display: flex;
-    justify-content: space-between;
 }
 
-.score{
-    margin-right: 5rem;
-    display: flex;
-    justify-content: space-between;
-    width: 20rem;
-    height: 20rem;
-    line-height: 7rem;
-}
-.number{
-    font-size: 4rem;
-}
-.input{
-    font-size: 3rem;
-}
-#input{
-    width: 25rem;
-    border-radius: 50px;
-    background-color: rgb(83,88,102);
-    border: none;
-    outline: none;    
+#input {
+    width: 22rem;
     height: 5rem;
-    padding: 1rem;
+    border-radius: 30px;
+    background-color: #161b22;
+    border: 2px solid #4a90e2;
+    color: white;
+    text-align: center;
+    font-size: 2.2rem;
+    transition: 0.3s;
+    outline: none;
+    box-shadow: 0px 4px 12px rgba(74, 144, 226, 0.2);
+}
+
+#input:focus {
+    border-color: #1e3a8a;
+    box-shadow: 0px 0px 12px rgba(74, 144, 226, 0.5);
+    transform: scale(1.03);
+}
+
+.score {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    background: rgba(74, 144, 226, 0.15);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(74, 144, 226, 0.2);
+    backdrop-filter: blur(8px);
+}
+
+.number {
     font-size: 4rem;
+    font-weight: bold;
 }
-#inputDiv{
-    width: 20rem;
-    height: 20rem;
-    line-height: 20rem;
 
+.input {
+    font-size: 1.8rem;
 }
-li:hover{
-    color: rgb(83,88,102);
-    background-color: rgb(22, 32, 51);
+
+li {
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+li:hover {
+    color: white;
+    background: linear-gradient(135deg, #4a90e2, #1e3a8a);
     cursor: pointer;
-   
+    transform: scale(1.05);
 }
 
-li:active{
-    color: rgb(22, 32, 51);
-    background-color: seagreen;
-
+li:active {
+    color: white;
+    background: #2c5282;
+    transform: scale(0.95);
 }
